@@ -1,12 +1,237 @@
-<!DOCTYPE html>
-<html lang="ja">
+<!doctype html>
+<html lang="ja" class="no-js">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koki-Itai</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>板井 孝樹</title>
+  <meta name="description" content="Homepage of Koki Itai (板井 孝樹)" />
+  <link rel="canonical" href="https://Koki-Itai.github.io/" />
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+
 </head>
+
 <body>
-    <h1>test！</h1>
-    <p>test。</p>
+  <!-- Header with Language Toggle -->
+  <header class="site-header">
+    <div class="header-container">
+      <div class="language-toggle">
+        <a href="./" class="lang-link active">日本語</a>
+        <span class="lang-separator">|</span>
+        <a href="./en/" class="lang-link">English</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="container">
+    <div class="grid">
+      <aside class="profile-sidebar card">
+        <div class="profile-content">
+          <img src="images/koki.png" alt="Portrait of Koki Itai" class="profile-image" />
+          <div class="profile-name">板井 孝樹</div>
+          <div class="profile-title">東京都立大学 情報科学域<br>博士前期課程2年</div>
+
+          <div class="social-links">
+              <!-- E-mail -->
+              <span class="social-icon-wrapper">
+                <a class="social-icon" id="email-copy-button" role="button" tabindex="0" aria-label="Copy email address"
+                  data-email="itai-koki@ed.tmu.ac.jp">
+                  <svg viewBox="0 0 24 24">
+                    <path
+                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 14H4V8l8 5 8-5v10Zm-8-7L4 6h16l-8 5Z" />
+                  </svg>
+                </a>
+                <span id="email-copy-status" class="copy-tooltip" style="display:none;">Copied!</span>
+              </span>
+
+              <!-- X -->
+              <a class="social-icon" href="https://x.com/Koki_Itai" target="_blank" rel="noopener" aria-label="X">
+                <svg viewBox="0 0 24 24" style="width:24px; height:24px;" fill="#000000">
+                  <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a class="social-icon" href="https://github.com/Koki-Itai" target="_blank" rel="noopener" aria-label="GitHub">
+                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"
+                  style="width:24px; height:24px;">
+              </a>
+
+              <!-- LinkedIn -->
+              <a class="social-icon" href="https://www.linkedin.com/in/koki-itai/" target="_blank" rel="noopener"
+                aria-label="LinkedIn">
+                <img src="images/icons/linkedin.jpg" alt="LinkedIn" style="width:24px; height:24px;">
+              </a>
+
+              <!-- Zenn -->
+              <a class="social-icon" href="https://zenn.dev/koki_itai" target="_blank" rel="noopener" aria-label="Zenn">
+                <img src="images/icons/zenn.png" alt="Zenn" style="width:24px; height:24px;">
+              </a>
+
+              <!-- Hugging Face -->
+              <a class="social-icon" href="https://huggingface.co/Koki-Itai" target="_blank" rel="noopener"
+                aria-label="Hugging Face">
+                <img src="https://huggingface.co/front/assets/huggingface_logo-noborder.svg" alt="Hugging Face"
+                  style="width:24px; height:24px;">
+              </a>
+            </div>
+      </aside>
+
+      <div class="main-content">
+
+
+        <section class="card content-section" id="about">
+          <h2>About</h2>
+          <div class="section-content">
+            <h3>Affiliation</h3>
+            <p>東京都立大学 システムデザイン研究科 情報科学域 <br> <a href="https://krectmt3.sd.tmu.ac.jp/">高間研究室</a> 博士前期課程2年 </p>
+
+            <h3>Research Interests</h3>
+            <ul>
+              <li>Agentic LLM</li>
+              <li>LLM for Recommendation</li>
+              <li>Mechanistic Interpretability</li>
+            </ul>
+          </div>
+        </section>
+
+
+        <section class="card content-section" id="experience">
+          <h2>Work Experience</h2>
+          <div class="section-content">
+            <div class="item">
+              <div class="year">2025/04 – Present</div>
+              <div class="organization"><strong><a
+                    href="https://www.sbintuitions.co.jp/">株式会社SB Intuitions</a></strong><span class="muted">研究開発 (Internship)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2024/02 – Present</div>
+              <div class="organization"><strong><a
+                    href="https://www.neoai.jp/">株式会社neoAI</a></strong><span class="muted">AIエンジニア, プロジェクトマネージャー (Internship)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2024/09 (1month) </div>
+              <div class="organization"><strong><a
+                    href="https://www.hitachi.co.jp/">株式会社日立製作所</a></strong><span class="muted">研究開発 (Internship)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2024/08 (1month) </div>
+              <div class="organization"><strong><a
+                    href="https://www.lycorp.co.jp/ja/">LINEヤフー株式会社</a></strong><span class="muted">AIエンジニア (Internship)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2023/02 - 2024/05 </div>
+              <div class="organization"><strong><a
+                    href="https://nuco.co.jp/">株式会社Nuco</a></strong><span class="muted">機械学習エンジニア (Internship)</span></div>
+            </div>
+          </div>
+        </section>
+
+
+        <section class="card content-section" id="publications">
+          <h2>Publications</h2>
+          <div class="section-content">
+
+            <h3>International Conference</h3>
+            <ul class="publications-list">
+              <li>
+                <span class="publication-title">Proposal of Modeling Personal Values Using Large Language Models for Extracting Mentions of Item Attributes and Evaluation Polarity from Review Texts</span>
+                <span class="publication-details">TAAI 2024 </span><br>
+                <span class="publication-details">Koki Itai, Hiroki Shibata, Yasufumi Takama</span><br>
+                <a class="pill" href="https://link.springer.com/chapter/10.1007/978-981-96-4596-1_10" target="_blank" rel="noopener">paper</a>
+                <a class="pill" href="documents/poster/TAAI2024.pdf" target="_blank" rel="noopener">poster</a>
+              </li>
+            </ul>
+
+            <h3>Domestic Conference / Symposium</h3>
+            <ul class="publications-list" id="domestic-publications-list">
+              <li>
+                <span class="publication-title">日本語RAGにおけるGenerator評価ベンチマークの構築</span>
+                <span class="publication-details">第265回自然言語処理研究発表会</span><br>
+                <span class="muted">板井 孝樹, 長谷川 駿一, 山本 勇太, 大槻 真輝 </span>
+              </li>
+              <li>
+                <span class="publication-title">Chain of Abstractionに基づく日本語Agentic RAGモデルの学習</span>
+                <span class="publication-details">第20回言語処理若手シンポジウム</span><br>
+                <span class="muted">板井 孝樹, 大萩 雅也, 福地 成彦</span>
+              </li>
+              <li>
+                <span class="publication-title">大規模言語モデルを用いたレビュー文からの価値観モデリングの提案</span>
+                <span class="publication-details">第38回人工知能学会全国大会</span><br>
+                <span class="muted">板井 孝樹, 柴田 祐樹, 高間 康史</span><br>
+                <a class="pill" href="https://www.jstage.jst.go.jp/article/pjsai/JSAI2024/0/JSAI2024_1J3OS10a02/_article/-char/ja/" target="_blank" rel="noopener">paper</a><br>
+              </li>
+              <li>
+                <span class="publication-title">大規模言語モデルを用いたレビュー文からの価値観モデル構築に関する予備的検討</span>
+                <span class="publication-details">第19回Webインテリジェンスとインタラクション研究会</span><br>
+                <span class="muted">板井 孝樹, 柴田 祐樹, 高間 康史</span><br>
+                <a class="pill" href="https://www.jstage.jst.go.jp/article/wii/19/0/19_3/_article/-char/ja/" target="_blank" rel="noopener">paper</a><br>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+
+
+        <section class="card content-section" id="education">
+          <h2>Education</h2>
+          <div class="section-content">
+            <div class="item">
+              <div class="year">2024/04 – 2026/03</div>
+              <div class="organization">東京都立大学 システムデザイン研究科 情報科学域</div>
+            </div>
+            <div class="item">
+              <div class="year">2020/04 – 2024/03</div>
+              <div class="organization">東京都立大学 システムデザイン学部 情報科学科</div>
+            </div>
+            <div class="item">
+              <div class="year">2027/04 – 2020/03</div>
+              <div class="organization">東京都立多摩科学技術高等学校</div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card content-section" id="awards">
+          <h2>Awards</h2>
+          <div class="section-content">
+            <div class="item">
+              <div class="year">2024年度</div>
+              <div class="award-name">東京都立大学 成績優秀者表彰<span class="muted"> (B3)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2023年度</div>
+              <div class="award-name">東京都立大学 成績優秀者表彰<span class="muted"> (B2)</span></div>
+            </div>
+            <div class="item">
+              <div class="year">2019年</div>
+              <div class="award-name">国立研究開発法人情報通信研究機構 NICTオープンハウス2019 学生奨励賞 <span class="muted"> (高校3年)</span></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="card content-section" id="others">
+          <h2>Others</h2>
+          <div class="section-content">
+            <h3>Talks</h3>
+            <div class="item">
+              <div class="year">2025/02</div>
+              <div class="event-title">neoAI Meetup #1 <a class="pill" href="https://neoai.connpass.com/event/345496/" target="_blank" rel="noopener">event</a></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="email-copy.js"></script>
+
+
 </body>
-</html>
+
+</html

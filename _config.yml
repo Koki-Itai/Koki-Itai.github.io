@@ -1,0 +1,25 @@
+remote_theme: "tareqdandachi/jekyll-shell-theme"
+
+# Site settings
+title: "Koki Itai"
+description: "Homepage of Koki Itai (板井 孝樹)"
+url: "https://Koki-Itai.github.io"
+baseurl: ""
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+
+# Include files
+include:
+  - en/
+
+# Exclude files
+exclude:
+  - README.md
