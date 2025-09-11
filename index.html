@@ -11,7 +11,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 
 
@@ -52,12 +52,12 @@
               <span class="social-icon-wrapper">
                 <a class="social-icon" id="email-copy-button" role="button" tabindex="0" aria-label="Copy email address"
                   data-email="itai-koki@ed.tmu.ac.jp">
-                  <svg viewBox="0 0 24 24">
-                    <path
-                      d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 14H4V8l8 5 8-5v10Zm-8-7L4 6h16l-8 5Z" />
-                  </svg>
+                  <img src="images/icons/email_bk.svg" alt="Email" class="email-icon-light"
+                    style="width:24px; height:24px;">
+                  <img src="images/icons/email_wh.svg" alt="Email" class="email-icon-dark"
+                    style="width:24px; height:24px;">
                 </a>
-                <span id="email-copy-status" class="copy-tooltip" style="display:none;">Copied!</span>
+                <span id="email-copy-status" class="copy-tooltip" style="display:none;">Copied</span>
               </span>
 
               <!-- X -->
@@ -69,7 +69,9 @@
 
               <!-- GitHub -->
               <a class="social-icon" href="https://github.com/Koki-Itai" target="_blank" rel="noopener" aria-label="GitHub">
-                <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub"
+                <img src="images/icons/github_bk.png" alt="GitHub" class="github-icon-light"
+                  style="width:24px; height:24px;">
+                <img src="images/icons/github_wh.png" alt="GitHub" class="github-icon-dark"
                   style="width:24px; height:24px;">
               </a>
 
@@ -94,7 +96,7 @@
       </aside>
 
       <div class="main-content">
-
+        <div class="profile-sections-wrapper">
 
         <section class="card content-section" id="about">
           <h2>About</h2>
@@ -235,11 +237,12 @@
             </div>
           </div>
         </section>
+        </div>
       </div>
     </div>
   </div>
 
-  <script src="email-copy.js"></script>
+  <script src="src/email-copy.js"></script>
 
 
 </body>

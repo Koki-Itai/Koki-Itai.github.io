@@ -3,11 +3,13 @@
     padding: 0;
     font-size: 20px;
     font-weight: 600;
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
     display: flex;
     align-items: center;
     gap: 14px;
     color: var(--text-primary);
+    line-height: 1.4;
+    font-feature-settings: "palt" 1, "kern" 1;
 }
 
 .content-section .section-content>h3::before {
@@ -160,6 +162,11 @@
         --shadow-default: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 10px 10px -5px rgba(0, 0, 0, 0.3);
         --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
     }
+    
+    .social-icon {
+        border: 1px solid rgba(255, 255, 255, 0.15);
+        box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+    }
 }
 
 /* 手動でライトテーマを指定した場合（VSCode Light+テーマ風） */
@@ -186,6 +193,11 @@ html[data-theme="dark"] {
     --shadow-default: 0 10px 24px rgba(0, 0, 0, .4), 0 6px 10px rgba(0, 0, 0, .2);
 }
 
+html[data-theme="dark"] .social-icon {
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
 
 
 .publication-details,
@@ -205,11 +217,16 @@ body {
 
 body {
     margin: 0;
-    font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Inter", "Noto Sans JP", system-ui, -apple-system, "Segoe UI", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Hiragino Kaku Gothic ProN", "Hiragino Sans", Roboto, Helvetica, Arial, sans-serif;
     background: var(--background-primary);
     color: var(--text-primary);
     backdrop-filter: blur(10px);
     min-height: 100vh;
+    font-feature-settings: "palt" 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.7;
+    letter-spacing: 0.02em;
 }
 
 a {
@@ -254,7 +271,7 @@ html {
 
 .card {
     background: var(--background-elevated);
-    border: 1px solid var(--border-line);
+    border: 2.0px solid var(--border-line);
     border-radius: var(--border-radius-large);
     box-shadow: var(--shadow-default);
     backdrop-filter: blur(20px);
@@ -276,6 +293,11 @@ html {
 .card:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-default), 0 0 0 1px rgba(102, 126, 234, 0.1);
+}
+
+/* Disable hover animation for profile sidebar */
+.profile-sidebar.card:hover {
+    transform: none;
 }
 
 .card .profile-content {
@@ -313,19 +335,21 @@ html {
 .profile-name {
     font-size: 36px;
     font-weight: 700;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.01em;
     margin: 0;
     color: var(--text-primary);
-    line-height: 1.1;
+    line-height: 1.2;
+    font-feature-settings: "palt" 1, "kern" 1;
 }
 
 .profile-title {
     font-size: 17px;
     color: var(--text-muted);
-    line-height: 1.4;
+    line-height: 1.6;
     margin: 0;
     text-align: center;
     max-width: 300px;
+    letter-spacing: 0.01em;
 }
 
 .tags {
@@ -363,9 +387,10 @@ html {
     position: relative;
     background: var(--background-glass);
     border-radius: var(--border-radius-default);
-    border: 1px solid var(--border-line);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     backdrop-filter: blur(10px);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
 }
 
 .social-icon:hover {
@@ -495,9 +520,11 @@ html {
     margin: 0;
     padding: 28px 32px 20px;
     border-bottom: 1px solid var(--border-line);
-    letter-spacing: -0.01em;
+    letter-spacing: 0.01em;
     color: var(--text-primary);
     position: relative;
+    line-height: 1.3;
+    font-feature-settings: "palt" 1, "kern" 1;
 }
 
 .content-section h2::after {
@@ -513,6 +540,21 @@ html {
 
 .content-section .section-content {
     padding: 28px 32px;
+}
+
+.content-section .section-content p {
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.2em;
+}
+
+.content-section .section-content ul {
+    line-height: 1.7;
+}
+
+.content-section .section-content li {
+    margin-bottom: 0.5em;
+    letter-spacing: 0.01em;
 }
 
 @media (min-width:981px) {
@@ -715,9 +757,11 @@ html {
 
 .publication-title {
     font-weight: 700;
-    line-height: 1.4;
+    line-height: 1.5;
     margin-bottom: 6px;
     display: block;
+    letter-spacing: 0.01em;
+    font-feature-settings: "palt" 1;
 }
 
 
@@ -866,5 +910,120 @@ body {
     .lang-link {
         padding: 4px 8px;
     }
+}
+
+/* GitHub icon theme support */
+.github-icon-light {
+    display: block;
+}
+
+.github-icon-dark {
+    display: none;
+}
+
+/* Email icon theme support */
+.email-icon-light {
+    display: block;
+}
+
+.email-icon-dark {
+    display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+    .github-icon-light {
+        display: none;
+    }
+    
+    .github-icon-dark {
+        display: block;
+    }
+    
+    .email-icon-light {
+        display: none;
+    }
+    
+    .email-icon-dark {
+        display: block;
+    }
+}
+
+/* Manual theme overrides */
+html[data-theme="light"] .github-icon-light {
+    display: block;
+}
+
+html[data-theme="light"] .github-icon-dark {
+    display: none;
+}
+
+html[data-theme="light"] .email-icon-light {
+    display: block;
+}
+
+html[data-theme="light"] .email-icon-dark {
+    display: none;
+}
+
+html[data-theme="dark"] .github-icon-light {
+    display: none;
+}
+
+html[data-theme="dark"] .github-icon-dark {
+    display: block;
+}
+
+html[data-theme="dark"] .email-icon-light {
+    display: none;
+}
+
+html[data-theme="dark"] .email-icon-dark {
+    display: block;
+}
+
+/* Profile sections wrapper - subtle container box */
+.profile-sections-wrapper {
+    background: var(--background-glass);
+    border: 1px solid var(--border-line);
+    border-radius: var(--border-radius-large);
+    padding: 16px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+    opacity: 0.7;
+}
+
+.profile-sections-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+/* Adjust margins for sections within the wrapper */
+.profile-sections-wrapper .content-section {
+    margin-bottom: 16px;
+}
+
+.profile-sections-wrapper .content-section:last-child {
+    margin-bottom: 0;
+}
+
+/* Dark mode adjustments */
+@media (prefers-color-scheme: dark) {
+    .profile-sections-wrapper {
+        border-color: rgba(84, 84, 84, 0.3);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    }
+    
+    .profile-sections-wrapper:hover {
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+}
+
+html[data-theme="dark"] .profile-sections-wrapper {
+    border-color: rgba(84, 84, 84, 0.3);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+html[data-theme="dark"] .profile-sections-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
 }
 
