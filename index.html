@@ -21,10 +21,21 @@
   <!-- Header with Language Toggle -->
   <header class="site-header">
     <div class="header-container">
-      <div class="language-toggle">
-        <a href="./" class="lang-link active">日本語</a>
-        <span class="lang-separator">|</span>
-        <a href="./en/" class="lang-link">English</a>
+      <div class="header-controls">
+        <button class="theme-toggle" id="theme-toggle" aria-label="テーマを切り替え">
+          <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="5"/>
+            <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+          </svg>
+          <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+        </button>
+        <div class="language-toggle">
+          <a href="./" class="lang-link active">日本語</a>
+          <span class="lang-separator">|</span>
+          <a href="./en/" class="lang-link">English</a>
+        </div>
       </div>
     </div>
 
@@ -43,7 +54,7 @@
     <div class="grid">
       <aside class="profile-sidebar card">
         <div class="profile-content">
-          <img src="images/koki.png" alt="Portrait of Koki Itai" class="profile-image" />
+          <img src="images/koki-itai_20251229.jpg" alt="Portrait of Koki Itai" class="profile-image" />
           <div class="profile-name">板井 孝樹</div>
           <div class="profile-title">東京都立大学 情報科学域<br>博士前期課程2年</div>
 
@@ -168,7 +179,7 @@
                 <span class="publication-details">TAAI 2024 </span><br>
                 <span class="publication-details">Koki Itai, Hiroki Shibata, Yasufumi Takama</span><br>
                 <a class="pill" href="https://link.springer.com/chapter/10.1007/978-981-96-4596-1_10" target="_blank" rel="noopener"><b>paper</b></a>
-                <a class="pill" href="documents/poster/TAAI2024.pdf" target="_blank" rel="noopener"><b>poster</b></a>
+                <a class="pill" href="resources/poster/TAAI2024.pdf" target="_blank" rel="noopener"><b>poster</b></a>
               </li>
             </ul>
 
@@ -185,7 +196,8 @@
                 <span class="publication-title">Chain of Abstractionに基づく日本語Agentic RAGモデルの学習</span>
                 <span class="publication-details">第20回言語処理若手シンポジウム</span><br>
                 <span class="muted">板井 孝樹, 大萩 雅也, 福地 成彦</span><br>
-                <a class="pill" href="documents/poster/YANS2025.pdf" target="_blank" rel="noopener"><b>poster</b></a>
+                <a class="pill" href="resources/poster/YANS2025.pdf" target="_blank" rel="noopener"><b>poster</b></a>
+                <a class="pill" href="resources/movie/video-player.html" target="_blank" rel="noopener"><b>movie</b></a>
               </li>
               <li>
                 <span class="publication-title">大規模言語モデルを用いたレビュー文からの価値観モデリングの提案</span>
@@ -227,6 +239,16 @@
           <h2>Awards</h2>
           <div class="section-content">
             <div class="item">
+              <div class="year">2025年</div>
+              <div class="award-name"><a href="https://yans.anlp.jp/entry/award" target="_blank" rel="noopener">第20回言語処理若手シンポジウム デモ賞</a></div>
+            </div>
+            <div class="item">
+              <div class="year">2024年</div>
+              <div class="award-name"><a href="https://weblab.t.u-tokyo.ac.jp/geniac-phase1-%E7%B5%90%E6%9E%9C%E7%99%BA%E8%A1%A8%E4%BC%9A/" target="_blank" rel="noopener">GENIAC 松尾研LLM開発プロジェクト 第3位</a>
+                <a class="pill" href="https://zenn.dev/matsuolab/articles/d32874451ca4d9" target="_blank" rel="noopener"><b>article</b></a>
+              </div>
+            </div>
+            <div class="item">
               <div class="year">2024年</div>
               <div class="award-name">東京都立大学 成績優秀者表彰 (GPA: 3.66)</div>
             </div>
@@ -257,7 +279,7 @@
   </div>
 
   <script src="src/email-copy.js"></script>
-
+  <script src="src/theme-toggle.js"></script>
 
 </body>
 

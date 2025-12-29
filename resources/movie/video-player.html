@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ja" class="no-js">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>CoASarashina-Chat Demo - 板井 孝樹</title>
+  <meta name="description" content="Chain of Abstraction に基づく日本語Agentic RAGモデルのデモ動画" />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../../style.css">
+  
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      background: var(--background-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans JP', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    }
+    
+    .video-container {
+      max-width: 1400px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    
+    .video-title {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: var(--text-primary);
+    }
+    
+    .video-subtitle {
+      font-size: 16px;
+      color: var(--text-secondary);
+      margin-bottom: 30px;
+    }
+    
+    video {
+      width: 100%;
+      max-width: 1400px;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+      background: #000;
+    }
+    
+    .back-link,
+    a.back-link,
+    a.back-link:link,
+    a.back-link:visited,
+    a.back-link:hover,
+    a.back-link:active {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 10px 20px;
+      background: var(--accent-primary);
+      color: #ffffff !important;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    
+    .back-link:hover {
+      background: var(--accent-secondary);
+      transform: translateY(-1px);
+    }
+    
+    @media (max-width: 768px) {
+      body {
+        padding: 15px;
+      }
+      
+      .video-title {
+        font-size: 24px;
+      }
+      
+      .video-subtitle {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="video-container">
+    <h1 class="video-title">Agentic Sarashina Chat Demo</h1>
+    <!-- <p class="video-subtitle">Chain of Abstraction に基づく日本語Agentic RAGモデルの学習 (YANS2025)</p> -->
+    
+    <video controls autoplay>
+      <source src="CoA_Sarashina-Chat Demo.mov" type="video/quicktime">
+      <source src="CoA_Sarashina-Chat Demo.mov" type="video/mp4">
+      お使いのブラウザは動画の再生をサポートしていません。
+      <a href="CoA_Sarashina-Chat Demo.mov">動画をダウンロード</a>してください。
+    </video>
+    
+    <br>
+    <a href="../../" class="back-link">← Back to Homepage</a>
+  </div>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L6EK8RQNNZ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-L6EK8RQNNZ');
+  </script>
+</body>
+
+</html>

@@ -22,10 +22,21 @@
     <!-- Header with Language Toggle -->
     <header class="site-header">
         <div class="header-container">
-            <div class="language-toggle">
-                <a href="../" class="lang-link">日本語</a>
-                <span class="lang-separator">|</span>
-                <a href="./" class="lang-link active">English</a>
+            <div class="header-controls">
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">
+                    <svg class="theme-icon sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/>
+                    </svg>
+                    <svg class="theme-icon moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+                    </svg>
+                </button>
+                <div class="language-toggle">
+                    <a href="../" class="lang-link">日本語</a>
+                    <span class="lang-separator">|</span>
+                    <a href="./" class="lang-link active">English</a>
+                </div>
             </div>
         </div>
         <!-- Google tag (gtag.js) -->
@@ -43,7 +54,7 @@
         <div class="grid">
             <aside class="profile-sidebar card">
                 <div class="profile-content">
-                    <img src="../images/koki.png" alt="Portrait of Koki Itai" class="profile-image" />
+                    <img src="../images/koki-itai_20251229.jpg" alt="Portrait of Koki Itai" class="profile-image" />
                     <div class="profile-name">Koki Itai</div>
                     <div class="profile-title"><a href="https://www.tmu.ac.jp/">Tokyo Metropolitan
                             University</a><br>Master's Student (2nd Year)</div>
@@ -98,6 +109,7 @@
                                 alt="Hugging Face" style="width:24px; height:24px;">
                         </a>
                     </div>
+                </div>
             </aside>
 
             <div class="main-content">
@@ -175,7 +187,7 @@
                                 <span class="publication-details">Koki Itai, Hiroki Shibata, Yasufumi Takama</span><br>
                                 <a class="pill" href="https://link.springer.com/chapter/10.1007/978-981-96-4596-1_10"
                                     target="_blank" rel="noopener">paper</a>
-                                <a class="pill" href="../documents/poster/TAAI2024.pdf" target="_blank"
+                                <a class="pill" href="../resources/poster/TAAI2024.pdf" target="_blank"
                                     rel="noopener">poster</a>
                             </li>
                         </ul>
@@ -197,7 +209,8 @@
                                 <span class="publication-details">The 20th Natural Language Processing Symposium for
                                     Young Researchers</span><br>
                                 <span class="muted">Koki Itai, Masaya Ohagi, Akihiko Fukuchi</span><br>
-                                <a class="pill" href="../documents/poster/YANS2025.pdf" target="_blank" rel="noopener"><b>poster</b></a>
+                                <a class="pill" href="../resources/poster/YANS2025.pdf" target="_blank" rel="noopener"><b>poster</b></a>
+                                <a class="pill" href="../resources/movie/video-player.html" target="_blank" rel="noopener"><b>movie</b></a>
                             </li>
                             <li>
                                 <span class="publication-title">Proposal of Value Modeling from Review Text Using Large
@@ -249,6 +262,16 @@
                     <h2>Awards</h2>
                     <div class="section-content">
                         <div class="item">
+                            <div class="year">2025</div>
+                            <div class="award-name"><a href="https://yans.anlp.jp/entry/award" target="_blank" rel="noopener">The 20th Natural Language Processing Symposium for Young Researchers Demo Award</a></div>
+                        </div>
+                        <div class="item">
+                            <div class="year">2024</div>
+                            <div class="award-name"><a href="https://weblab.t.u-tokyo.ac.jp/geniac-phase1-%E7%B5%90%E6%9E%9C%E7%99%BA%E8%A1%A8%E4%BC%9A/" target="_blank" rel="noopener">GENIAC Matsuo Lab LLM Development Project 3rd Place</a>
+                                <a class="pill" href="https://zenn.dev/matsuolab/articles/d32874451ca4d9" target="_blank" rel="noopener"><b>article</b></a>
+                            </div>
+                        </div>
+                        <div class="item">
                             <div class="year">2024</div>
                             <div class="award-name">Tokyo Metropolitan University Outstanding Academic Performance
                                 Award<span class="muted"> (GPA: 3.66)</span></div>
@@ -283,7 +306,7 @@
     </div>
 
     <script src="../src/email-copy.js"></script>
-
+    <script src="../src/theme-toggle.js"></script>
 
 </body>
 

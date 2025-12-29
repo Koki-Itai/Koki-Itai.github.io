@@ -167,35 +167,63 @@
         border: 1px solid rgba(255, 255, 255, 0.15);
         box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
     }
+    
+    .card::before {
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
+    }
 }
 
 /* 手動でライトテーマを指定した場合（VSCode Light+テーマ風） */
 html[data-theme="light"] {
     --background-primary: #ffffff;
     --background-elevated: #f8f8f8;
+    --background-glass: rgba(248, 248, 248, 0.75);
     --text-primary: #333333;
     --text-muted: #6a6a6a;
     --border-line: #e5e5e5;
     --accent-primary: #0066cc;
     --accent-secondary: #005a9e;
     --shadow-default: 0 10px 24px rgba(0, 0, 0, .08), 0 6px 10px rgba(0, 0, 0, .04);
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -1px rgba(0, 0, 0, 0.04);
+}
+
+/* 手動ライトテーマ時にダークモードメディアクエリをオーバーライド */
+html[data-theme="light"] .social-icon {
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05);
+}
+
+html[data-theme="light"] .profile-sections-wrapper {
+    border-color: var(--border-line);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+}
+
+html[data-theme="light"] .profile-sections-wrapper:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
 }
 
 /* 手動でダークテーマを指定した場合（VSCode Dark+テーマ風） */
 html[data-theme="dark"] {
     --background-primary: #1e1e1e;
     --background-elevated: #252526;
+    --background-glass: rgba(37, 37, 38, 0.75);
     --text-primary: #d4d4d4;
     --text-muted: #969696;
     --border-line: #545454;
     --accent-primary: #569cd6;
     --accent-secondary: #4fc1ff;
     --shadow-default: 0 10px 24px rgba(0, 0, 0, .4), 0 6px 10px rgba(0, 0, 0, .2);
+    --shadow-subtle: 0 4px 6px -1px rgba(0, 0, 0, 0.3), 0 2px 4px -1px rgba(0, 0, 0, 0.15);
 }
 
 html[data-theme="dark"] .social-icon {
     border: 1px solid rgba(255, 255, 255, 0.15);
     box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+/* カードの上部ハイライトをダークモード用に調整 */
+html[data-theme="dark"] .card::before {
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent);
 }
 
 
@@ -1025,5 +1053,86 @@ html[data-theme="dark"] .profile-sections-wrapper {
 
 html[data-theme="dark"] .profile-sections-wrapper:hover {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* Header Controls - Theme Toggle & Language Toggle Container */
+.header-controls {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Theme Toggle Button Styles */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    border: 1px solid var(--border-line);
+    border-radius: var(--border-radius-small);
+    background: var(--background-elevated);
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.theme-toggle:hover {
+    background: var(--background-glass);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-subtle);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
+.theme-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--text-primary);
+    transition: all 0.3s ease;
+    position: absolute;
+}
+
+/* Sun icon - visible in light mode */
+.theme-toggle .sun-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+.theme-toggle .moon-icon {
+    opacity: 0;
+    transform: rotate(-90deg) scale(0.5);
+}
+
+/* Dark mode - show moon icon */
+.theme-toggle.dark-mode .sun-icon {
+    opacity: 0;
+    transform: rotate(90deg) scale(0.5);
+}
+
+.theme-toggle.dark-mode .moon-icon {
+    opacity: 1;
+    transform: rotate(0deg) scale(1);
+}
+
+/* Responsive adjustments for theme toggle */
+@media (max-width: 768px) {
+    .header-controls {
+        gap: 12px;
+    }
+    
+    .theme-toggle {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .theme-icon {
+        width: 18px;
+        height: 18px;
+    }
 }
 
